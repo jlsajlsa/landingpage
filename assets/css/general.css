@@ -154,6 +154,7 @@ body h2 {
     text-decoration: none;
     letter-spacing: 1px;
     color: rgba(33,33,33,.57);
+    padding-bottom: 1rem;
 }
 
 .info-subcontent-description {
