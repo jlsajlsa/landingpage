@@ -91,9 +91,10 @@ img {
 }
 
 #galeria img:hover{
-    margin: -2px 0px 0px -2px;
-    transition: margin .2s;
+    /* margin: -2px 0px 0px -2px;
+    transition: margin .2s; */
     cursor: pointer;
+    opacity: 0.5;
 }
 
 h1 {
@@ -215,6 +216,90 @@ body h2 {
 }
 
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:focus, .close:hover {
+    color: white;
+    text-decoration: none;
+    opacity: .75;
+    font-size: 41px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 48%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    color: #f1f1f1;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.prev {left: 1rem;}
+.next {right: 1rem;}
+
+.prev:hover,
+.next:hover {
+    color: white;
+}
+
+
+button:focus {
+    outline: none !important;
+    outline: none !important;
+}
+
 @media (max-width: 992px){
     #section-title {
         display: block !important;
@@ -246,4 +331,18 @@ body h2 {
 @media (max-width: 767px){
     #filosofia .row .col-md-5 {order: 0;}
     #filosofia .row .col-md-7 {order: 1;}
+}
+
+@media (max-width: 650px){
+    .prev {
+        left: 0 !important;
+        background: transparent !important;
+        outline: none !important;
+    }
+    .next {
+        right: 0 !important;
+        background: transparent !important;
+        outline: none !important;
+    }
+    
 }
