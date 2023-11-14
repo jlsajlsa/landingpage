@@ -241,7 +241,9 @@ body h2 {
     #contacto form {
         width: 100% !important;
     }
+}
 
+@media (max-width: 767px){
     #filosofia .row .col-md-5 {order: 0;}
     #filosofia .row .col-md-7 {order: 1;}
 }
